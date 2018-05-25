@@ -1,0 +1,38 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/ACPFault.png</file>
+        <file>image/ACPRun.png</file>
+        <file>image/ACPStop.png</file>
+        <file>image/ACPUnknow.png</file>
+        <file>image/BApply.png</file>
+        <file>image/Bbypass.png</file>
+        <file>image/Bfault.png</file>
+        <file>image/Brelease.png</file>
+        <file>image/Bunknown.png</file>
+        <file>image/DCDCFault.bmp</file>
+        <file>image/DCDCRun.bmp</file>
+        <file>image/DCDCStop.bmp</file>
+        <file>image/DCDCUnknow.bmp</file>
+        <file>image/dooriso.bmp</file>
+        <file>image/fault.bmp</file>
+        <file>image/fault1.bmp</file>
+        <file>image/help.png</file>
+        <file>image/input.jpg</file>
+        <file>image/MC1Active.png</file>
+        <file>image/MC2Active.png</file>
+        <file>image/MotorFault.png</file>
+        <file>image/MotorRun.png</file>
+        <file>image/MotorStop.png</file>
+        <file>image/MotorUnknow.png</file>
+        <file>image/PBapply.png</file>
+        <file>image/PBbypass.png</file>
+        <file>image/PBFault.png</file>
+        <file>image/PBRelease.png</file>
+        <file>image/PBunknown.png</file>
+        <file>image/SIVFault.bmp</file>
+        <file>image/SIVRun.bmp</file>
+        <file>image/SIVStop.bmp</file>
+        <file>image/SIVUnknow.bmp</file>
+        <file>image/train.png</file>
+    </qresource>
+</RCC>

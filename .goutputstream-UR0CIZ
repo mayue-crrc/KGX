@@ -1,0 +1,180 @@
+#include "vehiclemonitorpage.h"
+#include "ui_vehiclemonitorpage.h"
+#include "qt_interface.h"
+
+VehicleMonitorPage::VehicleMonitorPage(QWidget *parent) :
+    BasePage(parent),
+    ui(new Ui::VehicleMonitorPage)
+{
+
+    ui->setupUi(this);
+    //live555_init();
+
+    cameraURL_0 = "rtsp://admin:10hxwxzx@192.168.10.101:554/h264/ch1/sub/av_stream";
+    cameraURL_1 = "rtsp://admin:10hxwxzx@192.168.10.108:554/h264/ch1/sub/av_stream";
+    cameraURL_2 = "rtsp://admin:10hxwxzx@192.168.10.102:554/h264/ch1/sub/av_stream";
+    cameraURL_3 = "rtsp://admin:10hxwxzx@192.168.10.103:554/h264/ch1/sub/av_stream";
+
+    cameraPosition_0.x = 160;
+    cameraPosition_0.y = 90;
+    cameraPosition_0.width = 281;
+    cameraPosition_0.height = 171;
+
+    cameraPosition_1.x = 480;
+    cameraPosition_1.y = 90;
+    cameraPosition_1.width = 281;
+    cameraPosition_1.height = 171;
+
+    cameraPosition_2.x = 160;
+    cameraPosition_2.y = 280;
+    cameraPosition_2.width = 281;
+    cameraPosition_2.height = 171;
+
+    cameraPosition_3.x = 480;
+    cameraPosition_3.y = 280;
+    cameraPosition_3.width = 281;
+    cameraPosition_3.height = 171;
+
+    cameraPosition_fullScreen.x = 160;
+    cameraPosition_fullScreen.y = 90;
+    cameraPosition_fullScreen.width = 600;
+    cameraPosition_fullScreen.height = 350;
+
+
+    ui->lbl_monitor_1->hide();
+    ui->lbl_monitor_2->hide();
+    ui->lbl_monitor_3->hide();
+    ui->lbl_monitor_4->hide();
+
+    counter = 0;
+
+    ui->background->hide();
+
+
+}
+
+void VehicleMonitorPage::showEvent(QShowEvent *)
+{
+    if(counter == 0)
+    {
+        open_connect(0, cameraURL_0, &cameraPosition_0);
+        open_connect(1, cameraURL_1, &cameraPosition_1);
+        open_connect(2, cameraURL_2, &cameraPosition_2);
+        open_connect(3, cameraURL_3, &cameraPosition_3);
+        counter ++;
+    }
+    else
+    {
+
+    }
+}
+
+VehicleMonitorPage::~VehicleMonitorPage()
+{
+    close_connect(0);
+    close_connect(1);
+    close_connect(2);
+    close_connect(3);
+    delete ui;
+}
+
+
+void VehicleMonitorPage::on_btn_mc1_pressed()
+{
+    ui->btn_mc1->setStyleSheet(MY_BUTTON_DOWN);
+    ui->btn_mc2->setStyleSheet(MY_BUTTON_UP);
+    ui->btn_t1->setStyleSheet(MY_BUTTON_UP);
+    ui->btn_t2->setStyleSheet(MY_BUTTON_UP);
+    ui->btn_poll->setStyleSheet(MY_BUTTON_UP);
+}
+
+void VehicleMonitorPage::on_btn_mc1_released()
+{
+
+    close_chn(0);
+    close_chn(1);
+    close_chn(2);
+    close_chn(3);
+    open_chn(0,&cameraPosition_fullScreen);
+}
+
+void VehicleMonitorPage::on_btn_mc2_pressed()
+{
+    ui->btn_mc2->setStyleSheet(MY_BUTTON_DOWN);
+    ui->btn_mc1->setStyleSheet(MY_BUTTON_UP);
+    ui->btn_t1->setStyleSheet(MY_BUTTON_UP);
+    ui->btn_t2->setStyleSheet(MY_BUTTON_UP);
+    ui->btn_poll->setStyleSheet(MY_BUTTON_UP);
+}
+
+void VehicleMonitorPage::on_btn_mc2_released()
+{
+
+    close_chn(0);
+    close_chn(1);
+    close_chn(2);
+    close_chn(3);
+    open_chn(3,&cameraPosition_fullScreen);
+
+}
+
+
+void VehicleMonitorPage::on_btn_t1_pressed()
+{
+    ui->btn_t1->setStyleSheet(MY_BUTTON_DOWN);
+    ui->btn_t2->setStyleSheet(MY_BUTTON_UP);
+    ui->btn_mc1->setStyleSheet(MY_BUTTON_UP);
+    ui->btn_mc2->setStyleSheet(MY_BUTTON_UP);
+    ui->btn_poll->setStyleSheet(MY_BUTTON_UP);
+}
+
+void VehicleMonitorPage::on_btn_t1_released()
+{
+
+    close_chn(0);
+    close_chn(1);
+    close_chn(2);
+    close_chn(3);
+    open_chn(1,&cameraPosition_fullScreen);
+}
+
+void VehicleMonitorPage::on_btn_t2_pressed()
+{
+    ui->btn_t2->setStyleSheet(MY_BUTTON_DOWN);
+    ui->btn_t1->setStyleSheet(MY_BUTTON_UP);
+    ui->btn_mc1->setStyleSheet(MY_BUTTON_UP);
+    ui->btn_mc2->setStyleSheet(MY_BUTTON_UP);
+    ui->btn_poll->setStyleSheet(MY_BUTTON_UP);
+}
+
+void VehicleMonitorPage::on_btn_t2_released()
+{
+
+    close_chn(0);
+    close_chn(1);
+    close_chn(2);
+    close_chn(3);
+    open_chn(2,&cameraPosition_fullScreen);
+}
+
+void VehicleMonitorPage::on_btn_poll_pressed()
+{
+    ui->btn_poll->setStyleSheet(MY_BUTTON_DOWN);
+    ui->btn_t1->setStyleSheet(MY_BUTTON_UP);
+    ui->btn_t2->setStyleSheet(MY_BUTTON_UP);
+    ui->btn_mc1->setStyleSheet(MY_BUTTON_UP);
+    ui->btn_mc2->setStyleSheet(MY_BUTTON_UP);
+}
+
+void VehicleMonitorPage::on_btn_poll_released()
+{
+    close_chn(0);
+    close_chn(1);
+    close_chn(2);
+    close_chn(3);
+    open_chn(0, &cameraPosition_0);
+    open_chn(1, &cameraPosition_1);
+    open_chn(2, &cameraPosition_2);
+    open_chn(3, &cameraPosition_3);
+
+}

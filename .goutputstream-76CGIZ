@@ -1,0 +1,49 @@
+#ifndef VEHICLEMONITORPAGE_H
+#define VEHICLEMONITORPAGE_H
+
+#include "basepage.h"
+#include "global.h"
+#include "qt_interface.h"
+
+namespace Ui {
+class VehicleMonitorPage;
+}
+
+class VehicleMonitorPage : public BasePage
+{
+    Q_OBJECT
+    
+public:
+    explicit VehicleMonitorPage(QWidget *parent = 0);
+    ~VehicleMonitorPage();
+    void showEvent(QShowEvent *);
+    
+private slots:
+    void on_btn_mc1_pressed();
+
+    void on_btn_mc1_released();
+
+    void on_btn_mc2_pressed();
+
+    void on_btn_mc2_released();
+
+    void on_btn_t1_pressed();
+
+    void on_btn_t1_released();
+
+    void on_btn_t2_pressed();
+
+    void on_btn_t2_released();
+
+    void on_btn_poll_pressed();
+
+    void on_btn_poll_released();
+
+private:
+    Ui::VehicleMonitorPage *ui;
+    char const *cameraURL_0,*cameraURL_1,*cameraURL_2,*cameraURL_3;
+    region cameraPosition_0,cameraPosition_1,cameraPosition_2,cameraPosition_3,cameraPosition_fullScreen;
+    int counter;
+};
+
+#endif // VEHICLEMONITORPAGE_H

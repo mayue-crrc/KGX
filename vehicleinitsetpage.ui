@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VehicleInitsetPage</class>
+ <widget class="QWidget" name="VehicleInitsetPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>568</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(0, 0, 0);</string>
+  </property>
+  <widget class="QPushButton" name="btn_back">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>380</y>
+     <width>91</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 18px ;
+color: rgb(255, 255, 255);
+background-color: rgb(51, 153, 255);
+border:3px solid;
+border-color:rgb(230, 230, 230);
+</string>
+   </property>
+   <property name="text">
+    <string>返回</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_MC1">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>90</y>
+     <width>151</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 18px ;
+color: rgb(255, 255, 255);
+background-color: rgb(51, 153, 255);
+border:3px solid;
+border-color:rgb(230, 230, 230);
+</string>
+   </property>
+   <property name="text">
+    <string>设置为MC1端</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_MC2">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>90</y>
+     <width>151</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 18px ;
+color: rgb(255, 255, 255);
+background-color: rgb(51, 153, 255);
+border:3px solid;
+border-color:rgb(230, 230, 230);
+</string>
+   </property>
+   <property name="text">
+    <string>设置为MC2端</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_rebootHMI">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>90</y>
+     <width>151</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 18px ;
+color: rgb(255, 255, 255);
+background-color: rgb(51, 153, 255);
+border:3px solid;
+border-color:rgb(230, 230, 230);
+</string>
+   </property>
+   <property name="text">
+    <string>重启HMI</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_curPositon">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>210</y>
+     <width>181</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75  20px ;
+color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string>当前位置 ： MC1</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CtrlLevelBar</class>
+ <widget class="QWidget" name="CtrlLevelBar">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>80</width>
+    <height>554</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QLabel
+{
+	font:  18px;
+	color: rgb(255, 255, 255);
+}</string>
+  </property>
+  <widget class="QLabel" name="Ctrl_label_P7">
+   <property name="geometry">
+    <rect>
+     <x>3</x>
+     <y>10</y>
+     <width>74</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>+7</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Ctrl_label_P6">
+   <property name="geometry">
+    <rect>
+     <x>3</x>
+     <y>40</y>
+     <width>74</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>+6</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Ctrl_label_background">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>80</width>
+     <height>501</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:3px solid white</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Ctrl_label_P4">
+   <property name="geometry">
+    <rect>
+     <x>3</x>
+     <y>100</y>
+     <width>74</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>+4</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Ctrl_label_P5">
+   <property name="geometry">
+    <rect>
+     <x>3</x>
+     <y>70</y>
+     <width>74</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>+5</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Ctrl_label_P0">
+   <property name="geometry">
+    <rect>
+     <x>3</x>
+     <y>220</y>
+     <width>74</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Ctrl_label_P2">
+   <property name="geometry">
+    <rect>
+     <x>3</x>
+     <y>160</y>
+     <width>74</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>+2</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Ctrl_label_P3">
+   <property name="geometry">
+    <rect>
+     <x>3</x>
+     <y>130</y>
+     <width>74</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>+3</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Ctrl_label_P1">
+   <property name="geometry">
+    <rect>
+     <x>3</x>
+     <y>190</y>
+     <width>74</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>+1</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Ctrl_label_N1">
+   <property name="geometry">
+    <rect>
+     <x>3</x>
+     <y>250</y>
+     <width>74</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(38, 50, 89);</string>
+   </property>
+   <property name="text">
+    <string>-1</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Ctrl_label_N2">
+   <property name="geometry">
+    <rect>
+     <x>3</x>
+     <y>280</y>
+     <width>74</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(38, 50, 89);</string>
+   </property>
+   <property name="text">
+    <string>-2</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Ctrl_label_N3">
+   <property name="geometry">
+    <rect>
+     <x>3</x>
+     <y>310</y>
+     <width>74</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(38, 50, 89);</string>
+   </property>
+   <property name="text">
+    <string>-3</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Ctrl_label_N4">
+   <property name="geometry">
+    <rect>
+     <x>3</x>
+     <y>340</y>
+     <width>74</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(38, 50, 89);</string>
+   </property>
+   <property name="text">
+    <string>-4</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Ctrl_label_N5">
+   <property name="geometry">
+    <rect>
+     <x>3</x>
+     <y>370</y>
+     <width>74</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(38, 50, 89);</string>
+   </property>
+   <property name="text">
+    <string>-5</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Ctrl_label_N6">
+   <property name="geometry">
+    <rect>
+     <x>3</x>
+     <y>400</y>
+     <width>74</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(38, 50, 89);</string>
+   </property>
+   <property name="text">
+    <string>-6</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Ctrl_label_N7">
+   <property name="geometry">
+    <rect>
+     <x>3</x>
+     <y>430</y>
+     <width>74</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(38, 50, 89);</string>
+   </property>
+   <property name="text">
+    <string>-7</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Ctrl_label_VALUE">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>500</y>
+     <width>80</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Ctrl_label_EB">
+   <property name="geometry">
+    <rect>
+     <x>3</x>
+     <y>460</y>
+     <width>74</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(38, 50, 89);</string>
+   </property>
+   <property name="text">
+    <string>EB</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <zorder>Ctrl_label_background</zorder>
+  <zorder>Ctrl_label_P7</zorder>
+  <zorder>Ctrl_label_P6</zorder>
+  <zorder>Ctrl_label_P4</zorder>
+  <zorder>Ctrl_label_P5</zorder>
+  <zorder>Ctrl_label_P0</zorder>
+  <zorder>Ctrl_label_P2</zorder>
+  <zorder>Ctrl_label_P3</zorder>
+  <zorder>Ctrl_label_P1</zorder>
+  <zorder>Ctrl_label_N1</zorder>
+  <zorder>Ctrl_label_N2</zorder>
+  <zorder>Ctrl_label_N3</zorder>
+  <zorder>Ctrl_label_N4</zorder>
+  <zorder>Ctrl_label_N5</zorder>
+  <zorder>Ctrl_label_N6</zorder>
+  <zorder>Ctrl_label_N7</zorder>
+  <zorder>Ctrl_label_VALUE</zorder>
+  <zorder>Ctrl_label_EB</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

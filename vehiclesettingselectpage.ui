@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VehicleSettingSelectPage</class>
+ <widget class="QWidget" name="VehicleSettingSelectPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>568</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="VehicleSettingPage_background">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>440</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(210, 210, 210);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_set5_password">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>160</y>
+     <width>131</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 18px ;
+color: rgb(255, 255, 255);
+background-color: rgb(51, 153, 255);
+border:3px solid;
+border-color:rgb(230, 230, 230);
+</string>
+   </property>
+   <property name="text">
+    <string>密码修改</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_set6_version">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>160</y>
+     <width>131</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 18px ;
+color: rgb(255, 255, 255);
+background-color: rgb(51, 153, 255);
+border:3px solid;
+border-color:rgb(230, 230, 230);
+</string>
+   </property>
+   <property name="text">
+    <string>版本信息</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_set2_accumulate">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>80</y>
+     <width>131</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 18px ;
+color: rgb(255, 255, 255);
+background-color: rgb(51, 153, 255);
+border:3px solid;
+border-color:rgb(230, 230, 230);
+</string>
+   </property>
+   <property name="text">
+    <string>累计设定</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_set3_init">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>80</y>
+     <width>131</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 18px ;
+color: rgb(255, 255, 255);
+background-color: rgb(51, 153, 255);
+border:3px solid;
+border-color:rgb(230, 230, 230);
+</string>
+   </property>
+   <property name="text">
+    <string>初始设定</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_set1_para">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>80</y>
+     <width>131</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 18px ;
+color: rgb(255, 255, 255);
+background-color: rgb(51, 153, 255);
+border:3px solid;
+border-color:rgb(230, 230, 230);
+</string>
+   </property>
+   <property name="text">
+    <string>参数设定</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_set4_time">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>160</y>
+     <width>131</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 18px ;
+color: rgb(255, 255, 255);
+background-color: rgb(51, 153, 255);
+border:3px solid;
+border-color:rgb(230, 230, 230);
+</string>
+   </property>
+   <property name="text">
+    <string>时间设定</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_set7_debug">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>240</y>
+     <width>131</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 18px ;
+color: rgb(255, 255, 255);
+background-color: rgb(51, 153, 255);
+border:3px solid;
+border-color:rgb(230, 230, 230);
+</string>
+   </property>
+   <property name="text">
+    <string>调试</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

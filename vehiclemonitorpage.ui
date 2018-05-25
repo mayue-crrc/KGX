@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VehicleMonitorPage</class>
+ <widget class="QWidget" name="VehicleMonitorPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>568</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:transparent;</string>
+  </property>
+  <widget class="QLabel" name="background">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>161</width>
+     <height>501</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(210, 210,210);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_mc1cab">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>190</y>
+     <width>121</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 18px ;
+color: rgb(255, 255, 255);
+background-color: rgb(51, 153, 255);
+border:3px solid;
+border-color:rgb(230, 230, 230);</string>
+   </property>
+   <property name="text">
+    <string>MC1司机室</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnpasserager">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>300</y>
+     <width>121</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 18px ;
+color: rgb(255, 255, 255);
+background-color: rgb(51, 153, 255);
+border:3px solid;
+border-color:rgb(230, 230, 230);</string>
+   </property>
+   <property name="text">
+    <string>客室</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>500</y>
+     <width>1022</width>
+     <height>68</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 18px ;
+color: rgb(255, 255, 255);
+background-color: rgb(51, 153, 255);
+border:1px solid;
+border-color:rgb(0, 0,0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_curStation">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>520</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 18px ;
+color: rgb(0, 0, 0);
+background-color: rgb(51, 153, 255);</string>
+   </property>
+   <property name="text">
+    <string>当前站：XXX</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_nextStation">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>520</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 18px ;
+color: rgb(0, 0, 0);
+background-color: rgb(51, 153, 255);</string>
+   </property>
+   <property name="text">
+    <string>下一站：XXX</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_desStation">
+   <property name="geometry">
+    <rect>
+     <x>790</x>
+     <y>520</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 18px ;
+color: rgb(0, 0, 0);
+background-color: rgb(51, 153, 255);</string>
+   </property>
+   <property name="text">
+    <string>终点站：XXX</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_poll">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>80</y>
+     <width>121</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 18px ;
+color: rgb(255, 255, 255);
+background-color: rgb(51, 153, 255);
+border:3px solid;
+border-color:rgb(230, 230, 230);</string>
+   </property>
+   <property name="text">
+    <string>轮询</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblbackground_top">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>0</y>
+     <width>821</width>
+     <height>57</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(210, 210,210);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblbackground_bottom">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>459</y>
+     <width>821</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(210, 210,210);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="background_4">
+   <property name="geometry">
+    <rect>
+     <x>980</x>
+     <y>0</y>
+     <width>51</width>
+     <height>500</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(210, 210,210);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_mc2cab">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>400</y>
+     <width>121</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 18px ;
+color: rgb(255, 255, 255);
+background-color: rgb(51, 153, 255);
+border:3px solid;
+border-color:rgb(230, 230, 230);</string>
+   </property>
+   <property name="text">
+    <string>MC2司机室</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblbackground_spare">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>260</y>
+     <width>410</width>
+     <height>200</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(210,210,210);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
