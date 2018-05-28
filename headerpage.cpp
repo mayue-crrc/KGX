@@ -16,10 +16,10 @@ void HeaderPage::updatePage()
 {
     ui->headerlabel_Date->setText(QDateTime::currentDateTime().toString("yyyy-MM-dd"));
     ui->headerlabel_Time->setText(QDateTime::currentDateTime().time().toString("hh:mm:ss"));
-    ui->headerlabel_Voltage->setText(QString::number(this->database->CTHM_CatenaryVoltage_U16)+"V");
-    ui->headerlabel_Current->setText(QString::number(this->database->CTHM_CatenaryCurrent_I16)+"A");
+    //ui->headerlabel_Voltage->setText(QString::number(this->database->CTHM_CatenaryVoltage_U16)+"V");
+    //ui->headerlabel_Current->setText(QString::number(this->database->CTHM_CatenaryCurrent_I16)+"A");
     ui->headerlabel_CurStation->setText("万达广场");
-    ui->headerlabel_TrainNum->setText(QString::number(this->database->Test_U32));
+   // ui->headerlabel_TrainNum->setText(QString::number(this->database->Test_U32));
 
 }
 

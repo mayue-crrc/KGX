@@ -231,7 +231,7 @@ background-color: rgb(115, 115, 115);</string>
     <enum>Qt::NoFocus</enum>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/new/prefix1/images/fault.bmp);</string>
+    <string notr="true">border-image: url(:/image/fault1.bmp);</string>
    </property>
    <property name="text">
     <string/>

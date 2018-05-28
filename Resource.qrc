@@ -34,5 +34,9 @@
         <file>image/SIVStop.bmp</file>
         <file>image/SIVUnknow.bmp</file>
         <file>image/train.png</file>
+        <file>image/HVACoff.png</file>
+        <file>image/HVACres.png</file>
+        <file>image/HVACrun.png</file>
+        <file>image/HVACwarn.png</file>
     </qresource>
 </RCC>

@@ -8,12 +8,10 @@ VehicleRunPage::VehicleRunPage(QWidget *parent) :
 {
     ui->setupUi(this);
     count = 0;
-    LevelBar = new CtrlLevelBar(this);
-    LevelBar->setGeometry(10,5,LevelBar->width(),LevelBar->height());
-    LevelBar->Ctrl_SetLevelvalue(0);
+
 
     Speedometer = new CtrlSpeedometer(this);
-    Speedometer ->setGeometry(380,250,Speedometer->width(),Speedometer->height());
+    Speedometer ->setGeometry(380,300,Speedometer->width(),Speedometer->height());
     Speedometer->setSpeenometerValue(60);
 
     setTracBrakeBarValue(300);

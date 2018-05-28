@@ -2,7 +2,6 @@
 #define VEHICLERUNPAGE_H
 
 #include "basepage.h"
-#include "ctrllevelbar.h"
 #include "ctrlspeedometer.h"
 
 namespace Ui {
@@ -29,7 +28,6 @@ private slots:
 private:
     Ui::VehicleRunPage *ui;
     int count ;
-    CtrlLevelBar *LevelBar;
     CtrlSpeedometer *Speedometer;
 };
 

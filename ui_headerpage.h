@@ -119,7 +119,7 @@ public:
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         pushButton->setGeometry(QRect(909, 2, 121, 96));
         pushButton->setFocusPolicy(Qt::NoFocus);
-        pushButton->setStyleSheet(QString::fromUtf8("border-image: url(:/new/prefix1/images/fault.bmp);"));
+        pushButton->setStyleSheet(QString::fromUtf8("border-image: url(:/image/fault1.bmp);"));
         headerlabel_PagePosition = new QLabel(HeaderPage);
         headerlabel_PagePosition->setObjectName(QString::fromUtf8("headerlabel_PagePosition"));
         headerlabel_PagePosition->setGeometry(QRect(600, 50, 150, 50));

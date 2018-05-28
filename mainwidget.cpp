@@ -259,6 +259,10 @@ void MainWidget::showEvent(QShowEvent *event)
         this->crrcRicoMvb->addSourcePort(0x312,MVB_FCode4,256);
         this->crrcRicoMvb->addSourcePort(0x313,MVB_FCode4,256);
 
+        QList<unsigned short int> tmp_list;
+        tmp_list<<0x310<<0x311<<0x312<<0x313<<0x320<<0x321<<0x322<<0x323;
+        this->database->getHMISourcePost(tmp_list);
+
     }else if(MainGetDefaultPara::getInt("/Position/HMI") == 2)
     {
         system("ifconfig eth1 192.168.3.2"); // X7 ETH1
@@ -281,6 +285,10 @@ void MainWidget::showEvent(QShowEvent *event)
         this->crrcRicoMvb->addSinkPort(0x312,MVB_FCode4,256);
         this->crrcRicoMvb->addSinkPort(0x313,MVB_FCode4,256);
 
+        QList<unsigned short int> tmp_list;
+        tmp_list<<0x320<<0x321<<0x322<<0x323<<0x310<<0x311<<0x312<<0x313;
+        this->database->getHMISourcePost(tmp_list);
+
     }else
     {
 
@@ -290,15 +298,15 @@ void MainWidget::showEvent(QShowEvent *event)
     {
         //CCU-ALL
         this->crrcRicoMvb->addSinkPort(0xF,MVB_FCode3,64);
-
-
         //CCU-HMI
         this->crrcRicoMvb->addSinkPort(0x308,MVB_FCode4,64);
         this->crrcRicoMvb->addSinkPort(0x309,MVB_FCode4,64);
         this->crrcRicoMvb->addSinkPort(0x30a,MVB_FCode4,256);
         this->crrcRicoMvb->addSinkPort(0x30b,MVB_FCode4,256);
-
         //RIOM->CCU
+        this->crrcRicoMvb->addSinkPort(0x118,MVB_FCode4,64);
+        this->crrcRicoMvb->addSinkPort(0x128,MVB_FCode4,64);
+        this->crrcRicoMvb->addSinkPort(0x138,MVB_FCode4,64);
         this->crrcRicoMvb->addSinkPort(0x110,MVB_FCode4,64);
         this->crrcRicoMvb->addSinkPort(0x111,MVB_FCode4,64);
         this->crrcRicoMvb->addSinkPort(0x112,MVB_FCode4,64);
@@ -308,15 +316,8 @@ void MainWidget::showEvent(QShowEvent *event)
         this->crrcRicoMvb->addSinkPort(0x131,MVB_FCode4,64);
         this->crrcRicoMvb->addSinkPort(0x132,MVB_FCode4,64);
 
-        //CCU-RIOM
-        this->crrcRicoMvb->addSinkPort(0x118,MVB_FCode4,64);
-        this->crrcRicoMvb->addSinkPort(0x128,MVB_FCode4,64);
-        this->crrcRicoMvb->addSinkPort(0x138,MVB_FCode4,64);
-
         //CCU-ERM
         this->crrcRicoMvb->addSinkPort(0x208,MVB_FCode4,256);
-
-        //ERM-CCU
         this->crrcRicoMvb->addSinkPort(0x210,MVB_FCode4,128);
         this->crrcRicoMvb->addSinkPort(0x211,MVB_FCode4,512);
         this->crrcRicoMvb->addSinkPort(0x212,MVB_FCode4,512);
@@ -325,6 +326,75 @@ void MainWidget::showEvent(QShowEvent *event)
         this->crrcRicoMvb->addSinkPort(0x221,MVB_FCode4,512);
         this->crrcRicoMvb->addSinkPort(0x222,MVB_FCode4,512);
         this->crrcRicoMvb->addSinkPort(0x223,MVB_FCode4,512);
+        //CCU-BCU
+        this->crrcRicoMvb->addSinkPort(0x408,MVB_FCode4,64);
+        this->crrcRicoMvb->addSinkPort(0x409,MVB_FCode4,64);
+        this->crrcRicoMvb->addSinkPort(0x410,MVB_FCode4,64);
+        this->crrcRicoMvb->addSinkPort(0x411,MVB_FCode4,64);
+        this->crrcRicoMvb->addSinkPort(0x412,MVB_FCode4,256);
+        this->crrcRicoMvb->addSinkPort(0x413,MVB_FCode4,1024);
+        this->crrcRicoMvb->addSinkPort(0x420,MVB_FCode4,64);
+        this->crrcRicoMvb->addSinkPort(0x421,MVB_FCode4,64);
+        this->crrcRicoMvb->addSinkPort(0x422,MVB_FCode4,256);
+        this->crrcRicoMvb->addSinkPort(0x423,MVB_FCode4,1024);
+        this->crrcRicoMvb->addSinkPort(0x430,MVB_FCode4,64);
+        this->crrcRicoMvb->addSinkPort(0x431,MVB_FCode4,64);
+        this->crrcRicoMvb->addSinkPort(0x432,MVB_FCode4,256);
+        this->crrcRicoMvb->addSinkPort(0x433,MVB_FCode4,1024);
+        //CCU-TCU
+        this->crrcRicoMvb->addSinkPort(0x508,MVB_FCode4,64);
+        this->crrcRicoMvb->addSinkPort(0x510,MVB_FCode4,64);
+        this->crrcRicoMvb->addSinkPort(0x511,MVB_FCode4,256);
+        this->crrcRicoMvb->addSinkPort(0x520,MVB_FCode4,64);
+        this->crrcRicoMvb->addSinkPort(0x521,MVB_FCode4,256);
+        this->crrcRicoMvb->addSinkPort(0x530,MVB_FCode4,64);
+        this->crrcRicoMvb->addSinkPort(0x531,MVB_FCode4,256);
+        this->crrcRicoMvb->addSinkPort(0x540,MVB_FCode4,64);
+        this->crrcRicoMvb->addSinkPort(0x541,MVB_FCode4,256);
+        this->crrcRicoMvb->addSinkPort(0x608,MVB_FCode4,64);
+        //CCU-ACU
+        this->crrcRicoMvb->addSinkPort(0x610,MVB_FCode4,64);
+        this->crrcRicoMvb->addSinkPort(0x611,MVB_FCode4,256);
+        this->crrcRicoMvb->addSinkPort(0x620,MVB_FCode4,64);
+        this->crrcRicoMvb->addSinkPort(0x621,MVB_FCode4,256);
+        //CCU-MDCU
+        this->crrcRicoMvb->addSinkPort(0x708,MVB_FCode4,256);
+        this->crrcRicoMvb->addSinkPort(0x710,MVB_FCode4,512);
+        this->crrcRicoMvb->addSinkPort(0x720,MVB_FCode4,512);
+        this->crrcRicoMvb->addSinkPort(0x730,MVB_FCode4,512);
+        this->crrcRicoMvb->addSinkPort(0x740,MVB_FCode4,512);
+        this->crrcRicoMvb->addSinkPort(0x750,MVB_FCode4,512);
+        this->crrcRicoMvb->addSinkPort(0x760,MVB_FCode4,512);
+        //CCU-PIS
+        this->crrcRicoMvb->addSinkPort(0x808,MVB_FCode4,256);
+        this->crrcRicoMvb->addSinkPort(0x810,MVB_FCode4,256);
+        this->crrcRicoMvb->addSinkPort(0x811,MVB_FCode4,256);
+        this->crrcRicoMvb->addSinkPort(0x820,MVB_FCode4,256);
+        this->crrcRicoMvb->addSinkPort(0x821,MVB_FCode4,256);
+        //CCU-HVAC
+        this->crrcRicoMvb->addSinkPort(0x908,MVB_FCode4,64);
+        this->crrcRicoMvb->addSinkPort(0x910,MVB_FCode4,256);
+        this->crrcRicoMvb->addSinkPort(0x920,MVB_FCode4,256);
+        this->crrcRicoMvb->addSinkPort(0x930,MVB_FCode4,256);
+        //CCU-ATC
+        this->crrcRicoMvb->addSinkPort(0xA08,MVB_FCode4,64);
+        this->crrcRicoMvb->addSinkPort(0xA09,MVB_FCode4,512);
+        this->crrcRicoMvb->addSinkPort(0xA10,MVB_FCode3,64);
+        this->crrcRicoMvb->addSinkPort(0xA11,MVB_FCode4,64);
+        this->crrcRicoMvb->addSinkPort(0xA20,MVB_FCode3,64);
+        this->crrcRicoMvb->addSinkPort(0xA21,MVB_FCode4,64);
+        //CCU-BCCU
+        this->crrcRicoMvb->addSinkPort(0xB08,MVB_FCode4,64);
+        this->crrcRicoMvb->addSinkPort(0xB10,MVB_FCode4,64);
+        this->crrcRicoMvb->addSinkPort(0xB20,MVB_FCode3,64);
+        //CCU-BMS
+        this->crrcRicoMvb->addSinkPort(0xC08,MVB_FCode2,64);
+        this->crrcRicoMvb->addSinkPort(0xC10,MVB_FCode3,64);
+        this->crrcRicoMvb->addSinkPort(0xC11,MVB_FCode4,256);
+        this->crrcRicoMvb->addSinkPort(0xC12,MVB_FCode4,256);
+        this->crrcRicoMvb->addSinkPort(0xC20,MVB_FCode3,64);
+        this->crrcRicoMvb->addSinkPort(0xC21,MVB_FCode4,256);
+        this->crrcRicoMvb->addSinkPort(0xC22,MVB_FCode4,256);
 
 #ifndef USER_DEBUG_MODE
         this->crrcRicoMvb->InitReadPortData();
